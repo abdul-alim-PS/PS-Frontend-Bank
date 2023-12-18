@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank App</title>
+    <link rel="icon" type="image/png" href="resources\bank-logo.png">
+    <link rel="stylesheet" type="text/css" href="styles\index.css">
+    <script src="scripts\index.js"></script>
+</head>
+
+<body>
+
+    <div>
+        <h2>Welcome to PS Bank</h2>
+        <div class="form-selection">
+            <button id="loginBtn">Login</button>
+            <button id="registerBtn">Register</button>
+        </div>
+            <form id="loginForm" class="active">
+                <label for="loginUsername">Username:</label>
+                <input type="text" id="loginUsername" placeholder="Enter username" name="loginUsername" required>
+
+                <label for="loginPassword">Password:</label>
+                <div class="password-container">
+                    <input type="password" id="loginPassword" placeholder="Enter password" name="loginPassword" required>
+                    <img src="resources/view.png" class="toggle-password" data-target="loginPassword"
+                        onclick="togglePassword('loginPassword')" width="20" height="20">
+                </div>
+
+                <button type="submit">Login</button>
+            </form>
+
+            <form id="registerForm" onsubmit="return validateRegistration()">
+                <h3>Create an Account</h3>
+
+                <label for="registerUsername">Username:</label>
+                <input type="text" id="registerUsername" placeholder="Enter username" name="registerUsername" required>
+
+                <label for="registerEmail">Email:</label>
+                <input type="text" id="registerEmail" placeholder="your@example.com" name="registerEmail" required>
+
+                <label for="registerPassword">Password:</label>
+                <div class="password-container">
+                    <input type="password" placeholder="Enter Password" id="registerPassword" name="registerPassword" required>
+                    <img src="resources/view.png" class="toggle-password" data-target="registerPassword"
+                        onclick="togglePassword('registerPassword')" width="20" height="20">
+                </div>
+
+                <button type="submit">Register</button>
+            </form>
+    </div>
+
+</body>
+
+</html>

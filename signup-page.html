@@ -15,10 +15,10 @@
     <div class="container">
       <div class="user signinBx">
         <div class="imgBx">
-          <img src="resources\WelCome to PS Bank.png" alt="" />
+          <img src="resources\IBS_Bank_Welcome.png" alt="" />
         </div>
         <div class="formBx">
-          <form action="" onsubmit="return false;">
+          <form action="#">
             <h2>Sign In</h2>
             <input type="text" name="" placeholder="Username" />
             <div class="password-container">
@@ -26,7 +26,7 @@
               <img src="resources/view.png" class="toggle-password" data-target="loginPassword"
                 onclick="togglePassword('loginPassword')" width="20" height="20">
             </div>
-            <input type="submit" name="" value="Login" />
+            <input type="button" id="loginBtn" value="Login" onclick="validateLogin()" />
             <p class="signup">
               Don't have an account ?
               <a href="#" onclick="toggleForm();">Sign Up.</a>
@@ -36,7 +36,7 @@
       </div>
       <div class="user signupBx">
         <div class="formBx">
-          <form action="" onsubmit="return validateRegistration();">
+          <form action="#">
             <h2>Create an account</h2>
             <input type="text" name="registerUserName" placeholder="Username" />
             <input type="email" name="registerEmail" placeholder="Email Address" />
@@ -52,14 +52,14 @@
               <img src="resources/view.png" class="toggle-password" data-target="registerConfirmPass"
                 onclick="togglePassword('registerConfirmPass')" width="20" height="20">
             </div>
-            <input type="submit" name="" value="Sign Up" />
+            <input type="button" name="" value="Sign Up" onclick="validateRegistration()"/>
             <p class="signup">
               Already have an account ?
               <a href="#" onclick="toggleForm();">Sign in.</a>
             </p>
           </form>
         </div>
-        <div class="imgBx"><img src="resources\WelCome to PS Bank.png" alt="" /></div>
+        <div class="imgBx"><img src="resources\IBS_Bank_Welcome.png" alt="" /></div>
       </div>
     </div>
   </section>

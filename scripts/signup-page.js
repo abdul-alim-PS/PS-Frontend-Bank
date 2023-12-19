@@ -31,21 +31,18 @@ function validatePassword(password){
     }
     return {isValid:true}
 }
-function validateRegistration() {
-    var password = document.getElementsByName("registerCreatePass").value;
-    var confirmPass = document.getElementsByName("registerConfirmPass")
+const validateRegistration=()=> {
+    let password = document.getElementsByName("registerCreatePass")[0];
+    let confirmPass = document.getElementsByName("registerConfirmPass")[0];
 
-    var validationPass = validatePassword(password); 
+    let validationPass = validatePassword(password); 
     if(!validationPass.isValid){
        alert(validationPass.alertText);
-       return false; 
     }
 
     if(!password===confirmPass){
         alert("Confirm Pass word didn't match.");
-        return false;
     }
-    return true;
 }
 function togglePassword(inputName) {
     var passwordInput = document.getElementsByName(inputName)[0];
@@ -55,6 +52,15 @@ function togglePassword(inputName) {
 
     eyeIcon.src = type === 'password' ? 'resources/view.png' : 'resources/hide.png';
 }
+
+const validateLogin=() => {
+    let password = document.getElementsByName("loginPassword")[0];
+    let validationPass = validatePassword(password); 
+    if(!validationPass.isValid){
+       alert(validationPass.alertText);
+    }
+}
+
 const toggleForm = () => {
     const container = document.querySelector('.container');
     container.classList.toggle('active');

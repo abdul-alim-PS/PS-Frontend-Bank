@@ -7,7 +7,6 @@
   <title>Bank App</title>
   <link rel="icon" type="image/png" href="resources\bank-logo.png">
   <link rel="stylesheet" type="text/css" href="styles\signup-page.css">
-  <script src="scripts\signup-page.js"></script>
 </head>
 
 <body>
@@ -20,9 +19,9 @@
         <div class="formBx">
           <form action="#">
             <h2>Sign In</h2>
-            <input type="text" name="" placeholder="Username" />
+            <input type="text" name="" placeholder="Username" required />
             <div class="password-container">
-              <input type="password" name="loginPassword" placeholder="Password" />
+              <input type="password" name="loginPassword" placeholder="Password" required />
               <img src="resources/view.png" class="toggle-password" data-target="loginPassword"
                 onclick="togglePassword('loginPassword')" width="20" height="20">
             </div>
@@ -38,21 +37,21 @@
         <div class="formBx">
           <form action="#">
             <h2>Create an account</h2>
-            <input type="text" name="registerUserName" placeholder="Username" />
-            <input type="email" name="registerEmail" placeholder="Email Address" />
+            <input type="text" name="registerUserName" placeholder="Username" required />
+            <input type="email" name="registerEmail" placeholder="Email Address" required />
             <input type="text" name="registerAddress" placeholder="Address" />
-            <input type="tel" name="registerPhoneNo" pattern="^[789]\d{9}$" placeholder="Phone No." />
+            <input type="tel" name="registerPhoneNo" pattern="^[789]\d{9}$" placeholder="Phone No." required />
             <div class="password-container">
-              <input type="password" name="registerCreatePass" placeholder="Create Password" />
+              <input type="password" name="registerCreatePass" placeholder="Create Password" required />
               <img src="resources/view.png" class="toggle-password" data-target="registerCreatePass"
                 onclick="togglePassword('registerCreatePass')" width="20" height="20">
             </div>
             <div class="password-container">
-              <input type="password" name="registerConfirmPass" placeholder="Confirm Password" />
+              <input type="password" name="registerConfirmPass" placeholder="Confirm Password" required />
               <img src="resources/view.png" class="toggle-password" data-target="registerConfirmPass"
                 onclick="togglePassword('registerConfirmPass')" width="20" height="20">
             </div>
-            <input type="button" name="" value="Sign Up" onclick="validateRegistration()"/>
+            <input type="button" name="" value="Sign Up" onclick="validateRegistration()" />
             <p class="signup">
               Already have an account ?
               <a href="#" onclick="toggleForm();">Sign in.</a>
@@ -64,5 +63,5 @@
     </div>
   </section>
 </body>
-
+<script src="scripts\signup-page.js"></script>
 </html>

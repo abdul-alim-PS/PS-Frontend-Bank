@@ -1,57 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bank App</title>
     <link rel="icon" type="image/png" href="resources\bank-logo.png">
     <link rel="stylesheet" type="text/css" href="styles\index.css">
     <script src="scripts\index.js"></script>
-</head>
+  </head>
+  <body>
+    <div class="banner-area">
+    <navbar>
+           <div class="menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">Dashboard</a></li>
+                    <li><a href="signup-page.html">Login|Sign-Up</a></li>
+                </ul>
+            </div>
 
-<body>
-
-    <div>
-        <h2>Welcome to PS Bank</h2>
-        <div class="form-selection">
-            <button id="loginBtn">Login</button>
-            <button id="registerBtn">Register</button>
+          </navbar>
+        <div class="banner-text">
+            <h1>PS Bank</h1>
+            <p>Welcome to our vibrant community! Here, we embrace diversity, creativity, and 
+              collaboration. Whether you're here to explore new ideas, connect with like-minded 
+              individuals, or simply enjoy the journey, your presence adds to the rich tapestry of 
+              our shared experience. Feel free to express yourself, share your stories, and let's 
+              build something amazing together. Welcome to a space where curiosity knows no bounds, 
+              and every voice is valued. Enjoy your time, and let the adventure unfold!</p>
         </div>
-            <form id="loginForm" class="active">
-                <label for="loginUsername">Username:</label>
-                <input type="text" id="loginUsername" placeholder="Enter username" name="loginUsername" required>
 
-                <label for="loginPassword">Password:</label>
-                <div class="password-container">
-                    <input type="password" id="loginPassword" placeholder="Enter password" name="loginPassword" required>
-                    <img src="resources/view.png" class="toggle-password" data-target="loginPassword"
-                        onclick="togglePassword('loginPassword')" width="20" height="20">
-                </div>
 
-                <button type="submit">Login</button>
-            </form>
-
-            <form id="registerForm" onsubmit="return validateRegistration()">
-                <h3>Create an Account</h3>
-
-                <label for="registerUsername">Username:</label>
-                <input type="text" id="registerUsername" placeholder="Enter username" name="registerUsername" required>
-
-                <label for="registerEmail">Email:</label>
-                <input type="text" id="registerEmail" placeholder="your@example.com" name="registerEmail" required>
-
-                <label for="registerPassword">Password:</label>
-                <div class="password-container">
-                    <input type="password" placeholder="Enter Password" id="registerPassword" name="registerPassword" required>
-                    <img src="resources/view.png" class="toggle-password" data-target="registerPassword"
-                        onclick="togglePassword('registerPassword')" width="20" height="20">
-                </div>
-
-                <button type="submit">Register</button>
-            </form>
     </div>
-
 </body>
-
 </html>

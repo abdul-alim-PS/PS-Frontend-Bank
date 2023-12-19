@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bank App</title>
+  <link rel="icon" type="image/png" href="resources\bank-logo.png">
+  <link rel="stylesheet" type="text/css" href="styles\signup-page.css">
+  <script src="scripts\signup-page.js"></script>
+</head>
+
+<body>
+  <section>
+    <div class="container">
+      <div class="user signinBx">
+        <div class="imgBx">
+          <img src="resources\WelCome to PS Bank.png" alt="" />
+        </div>
+        <div class="formBx">
+          <form action="" onsubmit="return false;">
+            <h2>Sign In</h2>
+            <input type="text" name="" placeholder="Username" />
+            <div class="password-container">
+              <input type="password" name="loginPassword" placeholder="Password" />
+              <img src="resources/view.png" class="toggle-password" data-target="loginPassword"
+                onclick="togglePassword('loginPassword')" width="20" height="20">
+            </div>
+            <input type="submit" name="" value="Login" />
+            <p class="signup">
+              Don't have an account ?
+              <a href="#" onclick="toggleForm();">Sign Up.</a>
+            </p>
+          </form>
+        </div>
+      </div>
+      <div class="user signupBx">
+        <div class="formBx">
+          <form action="" onsubmit="return validateRegistration();">
+            <h2>Create an account</h2>
+            <input type="text" name="registerUserName" placeholder="Username" />
+            <input type="email" name="registerEmail" placeholder="Email Address" />
+            <input type="text" name="registerAddress" placeholder="Address" />
+            <input type="tel" name="registerPhoneNo" pattern="^[789]\d{9}$" placeholder="Phone No." />
+            <div class="password-container">
+              <input type="password" name="registerCreatePass" placeholder="Create Password" />
+              <img src="resources/view.png" class="toggle-password" data-target="registerCreatePass"
+                onclick="togglePassword('registerCreatePass')" width="20" height="20">
+            </div>
+            <div class="password-container">
+              <input type="password" name="registerConfirmPass" placeholder="Confirm Password" />
+              <img src="resources/view.png" class="toggle-password" data-target="registerConfirmPass"
+                onclick="togglePassword('registerConfirmPass')" width="20" height="20">
+            </div>
+            <input type="submit" name="" value="Sign Up" />
+            <p class="signup">
+              Already have an account ?
+              <a href="#" onclick="toggleForm();">Sign in.</a>
+            </p>
+          </form>
+        </div>
+        <div class="imgBx"><img src="resources\WelCome to PS Bank.png" alt="" /></div>
+      </div>
+    </div>
+  </section>
+</body>
+
+</html>

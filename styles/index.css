@@ -1,70 +1,66 @@
+
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
-body {
-    margin: 1px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.banner-area{
+    background-image: url('https://images.unsplash.com/photo-1494500764479-0c8f2919a3d8?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYzNzU5MjE4OA&ixlib=rb-1.2.1&q=85');
+    background-position: center center;
+    background-size:cover ;
+    /* -webkit-background-size:cover ; */
     height: 100vh;
-    background-color: #f4f4f4;
+    width: auto;
+    margin: auto;
 }
-
-.container {
-    background-color: #fff;
-    padding: 40px 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    text-align: center;
+.menu{
+    float: right;
+    list-style: none;
+    margin-top:30px;
 }
-
-h2 {
-    margin-top: 0;
+.menu ul li{
+    display: inline-block;
 }
-form {
-    display: none;
-}
-form.active{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-}
-label, input, button {
-    margin-bottom: 15px;
+.menu ul li a{
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 20px;
+    font-family: 'poppins' ,sans-serif;
     font-size: 16px;
 }
-
-input, button {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    width: 100%;
-    box-sizing: border-box;
+.menu ul li a:hover{
+    color: rgb(199, 139, 255);
 }
-
-button {
-    background-color: #4caf50;
-    color: #fff;
-    cursor: pointer;
-}
-.password-container {
-    position: relative;
-}
-
-.toggle-password {
+.banner-text{
     position: absolute;
-    right: 10px;
-    top: 20px;
-    transform: translateY(-50%);
-    cursor: pointer;
+    width: 600px;
+    height: 300px;
+    margin: 20% 30%;
+    text-align: center;
 }
-.form-selection {
-    display: flex;
-    margin-bottom: 20px;
+.banner-text h1{
+    text-align: center;
+    color:rgb(233, 185, 255);
+    
+    text-transform: uppercase;
+    font-size: 60px;
+    font-family: 'poppins' , sans-serif;
 }
-.form-selection button {
-    margin-right: 10px;
+.banner-text p{
+    color: #fff;
+    font-size: 18px;
+}
+.banner-text a{
+    border: 1px solid #fff;
+    padding: 10px 25px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-top: 20px;
+    display: inline-block;
+    color: #fff;
+}
+.banner-text a:hover{
+    background-color: white;
+    color: rgba(68, 25, 109, 0.623);
+    font-weight: bold;
 }

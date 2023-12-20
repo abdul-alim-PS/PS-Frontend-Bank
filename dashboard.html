@@ -1,14 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Bank App</title>
-        <link rel="icon" type="image/png" href="resources\bank-logo.png">
-        <link rel="stylesheet" type="text/css" href="styles\dashboard.css">
-      </head>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Dashboard</title>
+</head>
+
 <body>
-    
+    <div class="menu">
+        <ul>
+            <li class="profile">
+                <div class="img-box">
+                    <img id="profilePic" alt="image">
+                </div>
+                <h2 id="userName"></h2>
+            </li>
+            <li>
+                <a href="#" class="active">
+                    <i class="fas fa-home"></i>
+                    <p>Dashboard</p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fas fa-cogs"></i>
+                    <p>Services</p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fas fa-cog"></i>
+                    <p>Settings</p>
+                </a>
+            </li>
+            <li class="log-out">
+                <a href="index.html">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <p>Log Out</p>
+                </a>
+            </li>
+        </ul>
+
+    </div>
+
+
+    <div class="content">
+        <div class="title-info">
+            <p>dashboard</p>
+            <i class="fas fa-chart-bar"></i>
+        </div>
+        <div class="data-info">
+            <div class="box">
+                <i class="fas fa-user"></i>
+                <div class="data">
+                    <p>Account Number</p>
+                    <span id="accountNumber"></span>
+                </div>
+            </div>
+            <div class="box">
+                <i class="fas fa-pen"></i>
+                <div class="data">
+                    <p>Balance</p>
+                    <span id="balance"></span>
+                </div>
+            </div>
+            <div class="box">
+                <i class="fas fa-table"></i>
+                <div class="data">
+                    <p>Latest Transaction</p>
+                    <span id="lastTransaction"></span>
+                </div>
+            </div>
+
+        </div>
+        <div class="title-info">
+            <p>Last Five Transactions</p>
+            <i class="fas fa-table"></i>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Ruppes</th>
+                    <th>Type</th>
+                </tr>
+            </thead>
+            <tbody id="transactionsTbody"></tbody>
+        </table>
+    </div>
 </body>
 <script src="scripts/dashboard.js"></script>
 </html>

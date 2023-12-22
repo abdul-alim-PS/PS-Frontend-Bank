@@ -48,7 +48,7 @@ const validateRegistration=()=> {
     }
 }
 const togglePassword=(inputName)=> {
-    var passwordInput = document.getElementsByName(inputName)[0].value;
+    var passwordInput = document.getElementsByName(inputName)[0];
     var eyeIcon = document.querySelector(`[data-target="${inputName}"]`);
     var type = passwordInput.type === 'password' ? 'text' : 'password';
     passwordInput.type = type;

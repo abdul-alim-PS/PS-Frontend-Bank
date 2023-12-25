@@ -29,6 +29,7 @@
 }
 .menu ul li a:hover{
     color: rgb(199, 139, 255);
+    cursor: pointer;
 }
 .banner-text{
     position: absolute;

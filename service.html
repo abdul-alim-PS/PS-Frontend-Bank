@@ -19,19 +19,19 @@
                 <h2 id="userName"></h2>
             </li>
             <li>
-                <a href="#" class="active">
+                <a href="dashboard.html">
                     <i class="fas fa-home"></i>
                     <p>Dashboard</p>
                 </a>
             </li>
             <li>
-                <a href="service.html">
+                <a href="#" class="active">
                     <i class="fas fa-cogs"></i>
                     <p>Services</p>
                 </a>
             </li>
             <li class="log-out">
-                <a id="logOutLink">
+                <a href="index.html">
                     <i class="fas fa-sign-out-alt"></i>
                     <p>Log Out</p>
                 </a>
@@ -43,48 +43,44 @@
 
     <div class="content">
         <div class="title-info">
-            <p>Dashboard</p>
+            <p>Services</p>
             <i class="fas fa-chart-bar"></i>
         </div>
         <div class="data-info">
             <div class="box">
                 <i class="fas fa-user"></i>
                 <div class="data">
-                    <p>Account Number</p>
-                    <span id="accountNumber"></span>
-                </div>
-            </div>
-            <div class="box">
-                <i class="fas fa-money-bill"></i>
-                <div class="data">
-                    <p>Balance</p>
+                    <p>User Balance</p>
                     <span id="balance"></span>
                 </div>
             </div>
             <div class="box">
-                <i class="fas fa-table"></i>
                 <div class="data">
-                    <p>Latest Transaction</p>
-                    <span id="lastTransaction"></span>
+                    <p>Deposit</p>
+                    <span id="deposit"></span>
+                    <form id="deposit-form">
+                        <input type="text" placeholder="Enter the amount" id="depositAmount">
+                        <input type="button" id="depositBtn" value="Deposit" onclick="depositMoney()">
+                    </form>
                 </div>
             </div>
-
+            <div class="box">
+                <div class="data">
+                    <p>Withdraw</p>
+                    <span id="withdraw"></span>
+                    <form id="withdraw-form">
+                        <input type="text" placeholder="Enter the amount" id="withdrawAmount">
+                        <input type="button" id="withdrawBtn" value="Withdraw" onclick="withdrawMoney()">
+                    </form>
+                </div>
+            </div>
         </div>
         <div class="title-info">
             <p>Last Five Transactions</p>
             <i class="fas fa-table"></i>
         </div>
-        <table>
-            <thead>
-                <tr>
-                    <th>Date</th>
-                    <th>Ruppes</th>
-                    <th>Type</th>
-                </tr>
-            </thead>
-            <tbody id="transactionsTbody"></tbody>
-        </table>
     </div>
 </body>
-<script type="module" src="scripts/dashboard.js"></script>
+<script type = "module" src="scripts/service.js"></script>
+
 </html>
